@@ -1,0 +1,27 @@
+{
+    "name": "Demopy Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "postCreateCommand": "pip install -e .[dev]",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "njpwerner.autodocstring"
+            ],
+            "settings": {
+                "python.pythonPath": "/venv/bin/python",
+                "editor.formatOnSave": true,
+                "python.linting.enabled": true,
+                "python.linting.mypyEnabled": true,
+                "python.linting.pylintEnabled": true
+            }
+        }
+    },
+    // "forwardPorts": [
+    //     8000
+    // ]
+}
